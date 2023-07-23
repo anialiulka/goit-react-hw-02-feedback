@@ -1,10 +1,9 @@
 import { Component } from 'react';
-import css from './Feedback.module.css';
-
-import { Statistics } from './Statistics';
-import { FeedbackOptions } from './FeedbackOptions';
-import { Section } from './Section';
-import { Notification } from './Notification';
+import { Statistics } from '../Statistics/Statistics';
+import { FeedbackOptions } from '../FeedbackOptions/FeedbackOptions';
+import { Section } from '../Section/Section';
+import { Notification } from '../Notification/Notification';
+import { Container } from './App.styled';
 
 export class App extends Component {
   state = {
@@ -39,7 +38,7 @@ export class App extends Component {
     );
 
     return (
-      <div className={css.box}>
+      <Container>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={this.state}
@@ -60,7 +59,7 @@ export class App extends Component {
             <Notification message="There is no feedback" />
           )}
         </Section>
-      </div>
+      </Container>
     );
   }
 }

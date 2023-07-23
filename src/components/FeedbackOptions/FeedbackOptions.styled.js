@@ -1,33 +1,20 @@
-.box {
-  margin-left: 40px;
-  margin-top: 60px;
-}
+import styled from 'styled-components';
 
-.heading {
-  font-size: 36px;
-}
-
-.list {
+export const List = styled.li`
   display: flex;
   padding: 0;
   margin-top: 60px;
   margin-bottom: 60px;
   gap: 25px;
   list-style: none;
-}
+`;
 
-.button {
+export const Button = styled.button`
   padding: 5px 25px;
   border-radius: 4px;
   border: 3px solid gray;
   background-color: whitesmoke;
   font-size: 30px;
   color: #222222;
-
   cursor: pointer;
-}
-
-.rating {
-  font-size: 30px;
-  font-weight: 500;
-}
+`;

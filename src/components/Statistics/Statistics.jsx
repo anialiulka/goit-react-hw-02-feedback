@@ -1,5 +1,5 @@
-import css from './Feedback.module.css';
 import PropTypes from 'prop-types';
+import { List, ListItem } from './Statistics.styled';
 
 export const Statistics = ({
   good,
@@ -8,13 +8,13 @@ export const Statistics = ({
   total,
   positivePercentage,
 }) => (
-  <ul className={css.list}>
-    <li className={css.rating}>Good: {good} </li>
-    <li className={css.rating}>Neutral: {neutral} </li>
-    <li className={css.rating}>Bad: {bad}</li>
-    <li className={css.rating}>Total: {total}</li>
-    <li className={css.rating}>Positive Feedback: {positivePercentage}%</li>
-  </ul>
+  <List>
+    <ListItem>Good: {good} </ListItem>
+    <ListItem>Neutral: {neutral} </ListItem>
+    <ListItem>Bad: {bad}</ListItem>
+    <ListItem>Total: {total}</ListItem>
+    <ListItem>Positive Feedback: {positivePercentage}%</ListItem>
+  </List>
 );
 
 Statistics.propTypes = {
