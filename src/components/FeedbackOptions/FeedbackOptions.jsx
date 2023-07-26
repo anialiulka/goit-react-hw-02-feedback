@@ -10,10 +10,8 @@ export class FeedbackOptions extends Component {
     return (
       <List>
         {keys.map((key, index) => (
-          <li>
-            <Button key={index} onClick={() => onLeaveFeedback(key)}>
-              {key}
-            </Button>
+          <li key={index}>
+            <Button onClick={() => onLeaveFeedback(key)}>{key}</Button>
           </li>
         ))}
       </List>
